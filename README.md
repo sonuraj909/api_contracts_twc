@@ -1,8 +1,4 @@
-# Loyalty Page API Contracts (Separate APIs)
-
-**Version:** 2.0.0  
-**Last Updated:** January 21, 2026  
-**Status:** Production Ready  
+# Loyalty Page API Contracts 
 
 ---
 
@@ -37,6 +33,9 @@ Returns widget skeleton configuration for loading states.
 
 ### Response Body (Success)
 
+
+For PARTNER
+
 ```json
 {
   "meta": {
@@ -53,16 +52,76 @@ Returns widget skeleton configuration for loading states.
         "view_type": "header_card"
       },
       {
-        "widget_name": "tier_progress_bar",
-        "view_type": "progress_indicator"
-      },
-      {
         "widget_name": "brew_journey_status",
         "view_type": "stepper_card"
       },
       {
-        "widget_name": "tier_benefits",
-        "view_type": "grid_layout"
+        "widget_name": "locked_tier_benefits", 
+        "view_type": "grid_layout" 
+      },
+      {
+        "widget_name": "loyalty_faqs",
+        "view_type": "accordion_list"
+      }
+    ]
+  }
+}
+```
+
+For INFLUENCER
+
+```json
+{
+  "meta": {
+    "request_id": "550e8400-e29b-41d4-a716-446655440000",
+    "timestamp": "2026-01-21T14:32:00Z",
+    "version": "1.0",
+    "end_point": "/api/v1/loyalty/skeleton",
+    "cacheable": true
+  },
+  "data": {
+    "skeleton": [
+      {
+        "widget_name": "loyalty_header",
+        "view_type": "header_card"
+      },
+      {
+        "widget_name": "unlocked_tier_benefits", 
+        "view_type": "carousel" 
+      },
+      {
+        "widget_name": "locked_tier_benefits", 
+        "view_type": "grid_layout" 
+      },
+      {
+        "widget_name": "loyalty_faqs",
+        "view_type": "accordion_list"
+      }
+    ]
+  }
+}
+```
+
+For AMBASSADOR
+
+```json
+{
+  "meta": {
+    "request_id": "550e8400-e29b-41d4-a716-446655440000",
+    "timestamp": "2026-01-21T14:32:00Z",
+    "version": "1.0",
+    "end_point": "/api/v1/loyalty/skeleton",
+    "cacheable": true
+  },
+  "data": {
+    "skeleton": [
+      {
+        "widget_name": "loyalty_header",
+        "view_type": "header_card"
+      },
+      {
+        "widget_name": "unlocked_tier_benefits", 
+        "view_type": "carousel" 
       },
       {
         "widget_name": "loyalty_faqs",
@@ -95,19 +154,52 @@ Returns user profile and current tier information for the page header.
     "cacheable": false
   },
   "data": {
-    "user": {
-      "id": "usr_a1b2c3d4e5f6",
-      "displayName": "John",
-      "image": {
-        "url": "https://cdn.waveapp.com/avatars/default.png"
-      }
-    },
     "tier": {
       "current": "PARTNER",
       "displayName": "Partner",
-      "level": 1,
-      "bg_color": ["#AC6069", "#EC8893"]
-    }
+      "image": {
+        "url": "https://cdn.waveapp.com/avatars/default.png"
+      },
+      "bg_color": ["##AC6069", "##EC8893"]
+    },
+    "progression": {
+      "currentOrderCount": 4,
+      "progressMessage": "2 orders away from becoming an Influencer",
+      "progressPercentage": 66.67,
+      "milestones": [
+        {
+          "tier": "PARTNER",
+          "orderThreshold": 0,
+          "displayLabel": "Partner",
+          "status": "CURRENT",
+          "orderCountDisplay": "3 orders / 37 days"
+        },
+        {
+          "tier": "INFLUENCER",
+          "orderThreshold": 6,
+          "displayLabel": "Influencer",
+          "status": "LOCKED",
+          "orderCountDisplay": "0/6"
+        },
+        {
+          "tier": "AMBASSADOR",
+          "orderThreshold": 12,
+          "displayLabel": "Ambassador",
+          "status": "LOCKED",
+          "orderCountDisplay": "0/6"
+        }
+      ]
+    },
+    "cycle": {
+      "startDate": "2025-12-15T00:00:00Z",
+      "endDate": "2026-03-15T00:00:00Z",
+      "daysRemaining": 53,
+      "totalDays": 90,
+      "maintenanceMessage": "Make 15 Orders by 9 March, to maintain this level.",
+      "ordersForMaintenance": 6,
+      "currentCycleOrders": 4,
+      "isMigrationCycle": false
+    },
   }
 }
 ```
