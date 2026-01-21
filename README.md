@@ -8,7 +8,8 @@
 - [Loyalty Header](#2-loyalty-header)
 - [Loyalty Progression](#3-loyalty-progression)
 - [Loyalty Brew Journey](#4-loyalty-brew-journey)
-- [Loyalty Benefits](#5-loyalty-benefits)
+- [Unlocked Loyalty Benefits](#5-unlocked-loyalty-benefits)
+- [Locked Loyalty Benefits](#6-locked-loyalty-benefits)
 - [Loyalty FAQ](#6-loyalty-faq)
 
 ---
