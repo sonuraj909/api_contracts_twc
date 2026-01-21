@@ -708,11 +708,160 @@ Returns Brew Journey status. Returns `null` data if user is not in Brew Journey.
 
 ---
 
-## 5. Loyalty Benefits
+## 5. Unlocked Loyalty Benefits
+
+**URL:** `/api/v1/loyalty/unlocked-benefits`
+
+**Method:** `GET`
+
+### Response Body (Success) - Influencer
+
+```json
+{
+  "meta": {
+    "request_id": "550e8400-e29b-41d4-a716-446655440011",
+    "timestamp": "2026-01-21T14:32:00Z",
+    "version": "1.0",
+    "end_point": "/api/v1/loyalty/unlocked-benefits",
+    "cacheable": false
+  },
+  "data": {
+    "title": "Influencer Benefits",
+    "sub_title": "Your exclusive perks as an influencer",
+    "tierBenefits": [
+      {
+        "title": "Referral Discount",
+        "title_color": "#FFFFFF",
+        "image": "https://cdn.waveapp.com/icons/birthday-coffee.png",
+        "tag": {
+          "label": "Unlimited",
+          "bg_color": "#535388",
+          "text_color": "#FFFFFF"
+        }
+      },
+      {
+        "title": "1 Free Coffee",
+        "title_color": "#FFFFFF",
+        "image": "https://cdn.waveapp.com/icons/birthday-coffee.png",
+        "tag": {
+          "label": "Claimed",
+          "bg_color": "#535388",
+          "text_color": "#FFFFFF"
+        }
+      },
+      {
+        "title": "1 Free Coffee",
+        "title_color": "#FFFFFF",
+        "image": "https://cdn.waveapp.com/icons/birthday-coffee.png",
+        "tag": null
+      }
+    ]
+  }
+}
+```
+
+### Response Body (Success) - Ambassador
+
+```json
+{
+  "meta": {
+    "request_id": "550e8400-e29b-41d4-a716-446655440011",
+    "timestamp": "2026-01-21T14:32:00Z",
+    "version": "1.0",
+    "end_point": "/api/v1/loyalty/unlocked-benefits",
+    "cacheable": false
+  },
+  "data": {
+    "title": "Influencer Benefits",
+    "sub_title": "Your exclusive perks as an influencer",
+    "tierBenefits": [
+      {
+        "title": "Referral Discount",
+        "title_color": "#FFFFFF",
+        "image": "https://cdn.waveapp.com/icons/birthday-coffee.png",
+        "tag": {
+          "label": "Unlimited",
+          "bg_color": "#535388",
+          "text_color": "#FFFFFF"
+        }
+      },
+      {
+        "title": "1 Free Coffee",
+        "title_color": "#FFFFFF",
+        "image": "https://cdn.waveapp.com/icons/birthday-coffee.png",
+        "tag": {
+          "label": "Claimed",
+          "bg_color": "#535388",
+          "text_color": "#FFFFFF"
+        }
+      },
+      {
+        "title": "1 Free Coffee",
+        "title_color": "#FFFFFF",
+        "image": "https://cdn.waveapp.com/icons/birthday-coffee.png",
+        "tag": null
+      }
+    ]
+  }
+}
+```
+
+### Response Body (Success) - Partner
+
+```json
+{
+  "meta": {
+    "request_id": "550e8400-e29b-41d4-a716-446655440011",
+    "timestamp": "2026-01-21T14:32:00Z",
+    "version": "1.0",
+    "end_point": "/api/v1/loyalty/unlocked-benefits",
+    "cacheable": false
+  },
+  "data": {
+    "title":"Influencer Benefits",
+    "sub_title":"Your exclusive perks as an influencer",
+    "tierBenefits": [
+    {
+      "title": "Referral Discount",
+      "tag":"Unlimited",
+      "tag_bg_color":"##535388",
+      "tag_text_color":"##535388",
+      "image": {
+            "url": "https://cdn.waveapp.com/icons/birthday-coffee.png"
+          },
+      "title_text_color":"##FFFFFF",
+    },
+    {
+      "title": "1 Free Coffee",
+      "tag":"Claimed",
+      "tag_bg_color":"##535388",
+      "tag_text_color":"##535388",
+      "image": {
+            "url": "https://cdn.waveapp.com/icons/birthday-coffee.png"
+          },
+      "title_text_color":"##FFFFFF",
+    }
+    {
+      "title": "1 Free Coffee",
+      "tag": null,
+      "tag_bg_color":"##535388",
+      "tag_text_color":"##535388",
+      "image": {
+            "url": "https://cdn.waveapp.com/icons/birthday-coffee.png"
+          },
+      "title_text_color":"##FFFFFF",
+    }
+    ]
+  }
+}
+```
+
+
+## 6. Locked Loyalty Benefits
 
 Returns current tier benefits and next tier benefits preview.
 
-**URL:** `/api/v1/loyalty/benefits`
+**URL:** `/api/v1/loyalty/locked-benefits`
 
 **Method:** `GET`
 
@@ -724,71 +873,82 @@ Returns current tier benefits and next tier benefits preview.
     "request_id": "550e8400-e29b-41d4-a716-446655440011",
     "timestamp": "2026-01-21T14:32:00Z",
     "version": "1.0",
-    "end_point": "/api/v1/loyalty/benefits",
+    "end_point": "/api/v1/loyalty/locked-benefits",
     "cacheable": false
   },
   "data": {
-    "currentTierBenefits": null,
-    "nextTierBenefits": {
+    "nextTierBenefits": [
+    {
       "tier": "INFLUENCER",
       "title": "Unlock Influencer Benefits",
-      "subtitle": null,
-      "isUnlocked": false,
+      "title_text_color":"##FFFFFF",
+      "title_bg_color":["##71719C", "##535388"],
+      "card_bg_color":["##AC6069", "##EC8893"],
+      "card_border_color":"##56568A",
+      "bg_color":"##FFFFFF",
       "benefits": [
         {
-          "id": "benefit_birthday_inf",
-          "type": "BIRTHDAY_OFFER",
           "title": "Free coffee for your birthday",
-          "description": null,
           "image": {
             "url": "https://cdn.waveapp.com/icons/birthday-coffee.png"
           },
-          "isActive": false,
-          "displayValue": null,
-          "metadata": {}
         },
         {
-          "id": "benefit_referral_inf",
-          "type": "REFERRAL_DISCOUNT",
           "title": "Referral discount",
-          "description": null,
           "image": {
             "url": "https://cdn.waveapp.com/icons/referral.png"
           },
-          "isActive": false,
-          "displayValue": null,
-          "metadata": {}
         },
         {
-          "id": "benefit_coins_inf",
-          "type": "WAVE_COINS",
           "title": "10% of net payable bill amount",
-          "description": null,
           "image": {
             "url": "https://cdn.waveapp.com/icons/wave-coins.png"
           },
-          "isActive": false,
-          "displayValue": "10%",
-          "metadata": {
-            "earnPercentage": 10
-          }
         },
         {
-          "id": "benefit_coffee_inf",
-          "type": "FREE_COFFEE",
           "title": "1 free coffee",
-          "description": null,
           "image": {
             "url": "https://cdn.waveapp.com/icons/free-coffee.png"
           },
-          "isActive": false,
-          "displayValue": "1 Free Coffee",
-          "metadata": {
-            "coffeeCount": 1
-          }
         }
       ]
     }
+    {
+      "tier": "AMBASSADOR",
+      "title": "Unlock Ambassador Benefits",
+      "title_text_color":"##FFFFFF",
+      "title_bg_color":["##71719C", "##535388"],
+      "card_bg_color":["##AC6069", "##EC8893"],
+      "card_border_color":"##56568A",
+      "bg_color":"##FFFFFF",
+      "benefits": [
+        {
+          "title": "Free coffee for your birthday",
+          "image": {
+            "url": "https://cdn.waveapp.com/icons/birthday-coffee.png"
+          },
+        },
+        {
+          "title": "Referral discount",
+          "image": {
+            "url": "https://cdn.waveapp.com/icons/referral.png"
+          },
+        },
+        {
+          "title": "10% of net payable bill amount",
+          "image": {
+            "url": "https://cdn.waveapp.com/icons/wave-coins.png"
+          },
+        },
+        {
+          "title": "1 free coffee",
+          "image": {
+            "url": "https://cdn.waveapp.com/icons/free-coffee.png"
+          },
+        }
+      ]
+    }
+    ]
   }
 }
 ```
@@ -798,182 +958,50 @@ Returns current tier benefits and next tier benefits preview.
 ```json
 {
   "meta": {
-    "request_id": "550e8400-e29b-41d4-a716-446655440012",
+    "request_id": "550e8400-e29b-41d4-a716-446655440011",
     "timestamp": "2026-01-21T14:32:00Z",
     "version": "1.0",
     "end_point": "/api/v1/loyalty/benefits",
     "cacheable": false
   },
   "data": {
-    "currentTierBenefits": {
-      "tier": "INFLUENCER",
-      "title": "Influencer Benefits",
-      "subtitle": "Your exclusive perks as an Influencer",
-      "isUnlocked": true,
-      "benefits": [
-        {
-          "id": "benefit_referral_inf_active",
-          "type": "REFERRAL_DISCOUNT",
-          "title": "Referral Discount",
-          "description": null,
-          "image": {
-            "url": "https://cdn.waveapp.com/icons/referral-teal.png"
-          },
-          "isActive": true,
-          "displayValue": null,
-          "metadata": {}
-        },
-        {
-          "id": "benefit_coffee_inf_active",
-          "type": "FREE_COFFEE",
-          "title": "1 Free Coffee",
-          "description": null,
-          "image": {
-            "url": "https://cdn.waveapp.com/icons/free-coffee-teal.png"
-          },
-          "isActive": true,
-          "displayValue": "Earned",
-          "metadata": {
-            "coffeeCount": 1
-          }
-        },
-        {
-          "id": "benefit_birthday_inf_active",
-          "type": "BIRTHDAY_OFFER",
-          "title": "Birthday Beverage",
-          "description": null,
-          "image": {
-            "url": "https://cdn.waveapp.com/icons/birthday-teal.png"
-          },
-          "isActive": true,
-          "displayValue": null,
-          "metadata": {}
-        }
-      ]
-    },
-    "nextTierBenefits": {
+    "nextTierBenefits": [
+    {
       "tier": "AMBASSADOR",
       "title": "Unlock Ambassador Benefits",
-      "subtitle": null,
-      "isUnlocked": false,
+      "title_text_color":"##FFFFFF",
+      "title_bg_color":["##71719C", "##535388"],
+      "card_bg_color":["##AC6069", "##EC8893"],
+      "card_border_color":"##56568A",
+      "bg_color":"##FFFFFF",
       "benefits": [
         {
-          "id": "benefit_birthday_amb",
-          "type": "BIRTHDAY_OFFER",
           "title": "Free coffee for your birthday",
-          "description": null,
           "image": {
             "url": "https://cdn.waveapp.com/icons/birthday-coffee.png"
           },
-          "isActive": false,
-          "displayValue": null,
-          "metadata": {}
         },
         {
-          "id": "benefit_referral_amb",
-          "type": "REFERRAL_DISCOUNT",
           "title": "Referral discount",
-          "description": null,
           "image": {
             "url": "https://cdn.waveapp.com/icons/referral.png"
           },
-          "isActive": false,
-          "displayValue": null,
-          "metadata": {}
         },
         {
-          "id": "benefit_coins_amb",
-          "type": "WAVE_COINS",
-          "title": "15% of net payable bill amount",
-          "description": null,
+          "title": "10% of net payable bill amount",
           "image": {
             "url": "https://cdn.waveapp.com/icons/wave-coins.png"
           },
-          "isActive": false,
-          "displayValue": "15%",
-          "metadata": {
-            "earnPercentage": 15
-          }
         },
         {
-          "id": "benefit_coffee_amb",
-          "type": "FREE_COFFEE",
-          "title": "2 free coffees",
-          "description": null,
+          "title": "1 free coffee",
           "image": {
-            "url": "https://cdn.waveapp.com/icons/free-coffee-double.png"
+            "url": "https://cdn.waveapp.com/icons/free-coffee.png"
           },
-          "isActive": false,
-          "displayValue": "2 Free Coffees",
-          "metadata": {
-            "coffeeCount": 2
-          }
         }
       ]
     }
-  }
-}
-```
-
-### Response Body (Success) - Ambassador
-
-```json
-{
-  "meta": {
-    "request_id": "550e8400-e29b-41d4-a716-446655440013",
-    "timestamp": "2026-01-21T14:32:00Z",
-    "version": "1.0",
-    "end_point": "/api/v1/loyalty/benefits",
-    "cacheable": false
-  },
-  "data": {
-    "currentTierBenefits": {
-      "tier": "AMBASSADOR",
-      "title": "Ambassador Benefits",
-      "subtitle": "Your exclusive perks as an Ambassador",
-      "isUnlocked": true,
-      "benefits": [
-        {
-          "id": "benefit_referral_amb_active",
-          "type": "REFERRAL_DISCOUNT",
-          "title": "Referral Discount",
-          "description": null,
-          "image": {
-            "url": "https://cdn.waveapp.com/icons/referral-gold.png"
-          },
-          "isActive": true,
-          "displayValue": null,
-          "metadata": {}
-        },
-        {
-          "id": "benefit_coffee_amb_active",
-          "type": "FREE_COFFEE",
-          "title": "2 Free Coffees",
-          "description": "on level upgrade",
-          "image": {
-            "url": "https://cdn.waveapp.com/icons/free-coffee-gold.png"
-          },
-          "isActive": true,
-          "displayValue": "Earned",
-          "metadata": {
-            "coffeeCount": 2
-          }
-        },
-        {
-          "id": "benefit_birthday_amb_active",
-          "type": "BIRTHDAY_OFFER",
-          "title": "Birthday Coffee",
-          "description": null,
-          "image": {
-            "url": "https://cdn.waveapp.com/icons/birthday-gold.png"
-          },
-          "isActive": true,
-          "displayValue": null,
-          "metadata": {}
-        }
-      ]
-    },
-    "nextTierBenefits": null
+    ]
   }
 }
 ```
@@ -1003,36 +1031,26 @@ Returns FAQ items for the loyalty program.
     "title": "FAQs",
     "faqs": [
       {
-        "id": "faq_001",
         "question": "How do I become a Partner?",
         "answer": "You automatically become a Partner when you register on the Wave app. As a Partner, you can start placing orders and progress towards higher tiers."
       },
       {
-        "id": "faq_002",
         "question": "How do I advance to Influencer?",
         "answer": "Place 6 orders within a 90-day cycle to become an Influencer. You'll unlock benefits like 10% Wave Coins on every order and a free birthday coffee."
       },
       {
-        "id": "faq_003",
         "question": "How do I advance to Ambassador?",
         "answer": "Place 12 orders within a 90-day cycle to become an Ambassador. You'll enjoy 15% Wave Coins, 2 free coffees on upgrade, and exclusive birthday benefits."
       },
       {
-        "id": "faq_004",
         "question": "What happens if I don't maintain my tier?",
         "answer": "If you don't place the required orders within your 90-day cycle, you'll be moved to the previous tier. Influencers need 6 orders to maintain, Ambassadors need 12."
       },
       {
-        "id": "faq_005",
         "question": "How long are Wave Coins valid?",
         "answer": "Wave Coins are valid for 1 year from the date they are earned. Use them before they expire!"
       }
     ],
-    "support": {
-      "showChatSupport": true,
-      "chatSupportCta": "Chat with Us",
-      "chatSupportUrl": "https://support.waveapp.com/chat"
-    }
   }
 }
 ```
