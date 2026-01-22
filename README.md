@@ -855,7 +855,7 @@ Returns FAQ items for the loyalty program.
       },
       "ordersCompleted": 3,
       "ordersRequired": 6,
-\    }
+    }
   }
 }
 ```
