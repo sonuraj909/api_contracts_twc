@@ -810,3 +810,123 @@ Returns FAQ items for the loyalty program.
 ```
 
 ---
+
+
+## 7. Loyalty Progress Widget for App Scan Bottom Sheet
+
+![alt text](image.png)
+
+**URL:** `/api/v1/loyalty/progress-widget`
+
+**Method:** `GET`
+
+# Response Body - Partner (progressing to Influencer)
+
+```json
+{
+  "meta": {
+    "request_id": "550e8400-e29b-41d4-a716-446655440001",
+    "timestamp": "2026-01-21T14:32:00Z",
+    "version": "1.0",
+    "end_point": "/api/v1/loyalty/progress-widget",
+    "cacheable": false
+  },
+  "data": {
+    "currentTier": {
+      "tier": "PARTNER",
+      "displayLabel": "Partner",
+      "iconColor": "#AC6069"
+    },
+    "nextTier": {
+      "tier": "INFLUENCER",
+      "displayLabel": "Influencer",
+      "iconColor": "#7B68AE"
+    },
+    "progress": {
+      "message": "Just 3 more orders to unlock your next level!",
+      "messageType": "PROGRESSION",
+      "ordersCompleted": 3,
+      "ordersRequired": 6,
+      "ordersRemaining": 3,
+      "progressPercentage": 50,
+      "progressSegments": {
+        "total": 6,
+        "filled": 3
+      }
+    }
+  }
+}
+```
+
+# Response Body - Influencer (progressing to Ambassador)
+
+```json
+{
+  "meta": {
+    "request_id": "550e8400-e29b-41d4-a716-446655440002",
+    "timestamp": "2026-01-21T14:32:00Z",
+    "version": "1.0",
+    "end_point": "/api/v1/loyalty/progress-widget",
+    "cacheable": false
+  },
+  "data": {
+    "currentTier": {
+      "tier": "INFLUENCER",
+      "displayLabel": "Influencer",
+      "iconColor": "#7B68AE"
+    },
+    "nextTier": {
+      "tier": "AMBASSADOR",
+      "displayLabel": "Ambassador",
+      "iconColor": "#2D8B6F"
+    },
+    "progress": {
+      "message": "Just 3 more orders to unlock your next level!",
+      "messageType": "PROGRESSION",
+      "ordersCompleted": 3,
+      "ordersRequired": 6,
+      "ordersRemaining": 3,
+      "progressPercentage": 50,
+      "progressSegments": {
+        "total": 6,
+        "filled": 3
+      }
+    }
+  }
+}
+```
+
+# Response Body - Ambassador (retention mode)
+
+
+```json
+{
+  "meta": {
+    "request_id": "550e8400-e29b-41d4-a716-446655440003",
+    "timestamp": "2026-01-21T14:32:00Z",
+    "version": "1.0",
+    "end_point": "/api/v1/loyalty/progress-widget",
+    "cacheable": false
+  },
+  "data": {
+    "currentTier": {
+      "tier": "AMBASSADOR",
+      "displayLabel": "Ambassador",
+      "iconColor": "#2D8B6F"
+    },
+    "nextTier": null,
+    "progress": {
+      "message": "9 more orders to retain your Ambassador status",
+      "messageType": "RETENTION",
+      "ordersCompleted": 6,
+      "ordersRequired": 15,
+      "ordersRemaining": 9,
+      "progressPercentage": 40,
+      "progressSegments": {
+        "total": 6,
+        "filled": 3
+      }
+    },
+  }
+}
+```
