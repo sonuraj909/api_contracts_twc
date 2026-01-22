@@ -405,6 +405,7 @@ Returns user profile and current tier information for the page header.
 
 **Method:** `GET`
 
+```json
 {
   "meta": {
     "request_id": "550e8400-e29b-41d4-a716-446655440000",
@@ -453,6 +454,7 @@ Returns user profile and current tier information for the page header.
     ]
   }
 }
+```
 
 Refer this more
 
