@@ -10,6 +10,7 @@
 - [Unlocked Loyalty Benefits](#5-unlocked-loyalty-benefits)
 - [Locked Loyalty Benefits](#6-locked-loyalty-benefits)
 - [Loyalty FAQ](#6-loyalty-faq)
+- [Loyalty Progress Widget for App Scan Bottom Sheet](#7-loyalty-progress-widget-for-app-scan-bottom-sheet)
 
 ---
 
@@ -401,7 +402,7 @@ Returns user profile and current tier information for the page header.
 
 ## 4. Loyalty Brew Journey
 
-**URL:** `/api/v1/loyalty/new-user-journey`
+**URL:** `/api/v2/homepage/get-data/type=new-user-journey`
 
 **Method:** `GET`
 
