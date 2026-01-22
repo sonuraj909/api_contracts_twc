@@ -821,7 +821,7 @@ Returns FAQ items for the loyalty program.
 
 **Method:** `GET`
 
-# Response Body - Partner (progressing to Influencer)
+### Response Body - Partner (progressing to Influencer)
 
 ```json
 {
@@ -860,7 +860,7 @@ Returns FAQ items for the loyalty program.
 }
 ```
 
-# Response Body - Influencer (progressing to Ambassador)
+### Response Body - Influencer (progressing to Ambassador)
 
 ```json
 {
@@ -899,7 +899,7 @@ Returns FAQ items for the loyalty program.
 }
 ```
 
-# Response Body - Ambassador (retention mode)
+### Response Body - Ambassador
 
 
 ```json
@@ -927,7 +927,7 @@ Returns FAQ items for the loyalty program.
         "track_color": "#656060"
       },
       "ordersCompleted": 6,
-      "ordersRequired": 15,
+      "ordersRequired": 12,
     },
   }
 }
