@@ -6,7 +6,6 @@
 
 - [Loyalty Skeleton](#1-loyalty-skeleton)
 - [Loyalty Header](#2-loyalty-header)
-- [Loyalty Progression](#3-loyalty-progression)
 - [Loyalty Brew Journey](#4-loyalty-brew-journey)
 - [Unlocked Loyalty Benefits](#5-unlocked-loyalty-benefits)
 - [Locked Loyalty Benefits](#6-locked-loyalty-benefits)
@@ -159,35 +158,58 @@ Returns user profile and current tier information for the page header.
       "current": "PARTNER",
       "displayName": "Partner",
       "image": {
-        "url": "https://cdn.waveapp.com/avatars/default.png"
+        "url": "https://cdn.waveapp.com/avatars/partner.png"
       },
-      "bg_color": ["##AC6069", "##EC8893"]
+      "bgColor": ["#AC6069", "#EC8893"]
     },
     "progression": {
-      "currentOrderCount": 4,
-      "progressMessage": "2 orders away from becoming an Influencer",
-      "progressPercentage": 66.67,
+      "totalOrderCount": 3,
+      "currentTierOrderCount": 3,
+      "progressMessage": "3 orders away from becoming an Influencer",
+      "progressPercentage": 50,
+      "isMaxTier": false,
       "milestones": [
         {
           "tier": "PARTNER",
-          "orderThreshold": 0,
+          "orderThreshold": 6,
+          "cumulativeThreshold": 6,
           "displayLabel": "Partner",
           "status": "CURRENT",
-          "orderCountDisplay": "3 orders / 37 days"
+          "badgeType": "PROGRESS",
+          "badgeText": "3/6",
+          "orderCountDisplay": "3 orders / 37 days",
+          "ordersInTier": 3,
+          "ordersNeeded": 6,
+          "daysInTier": 37,
+          "progressInTier": 50
         },
         {
           "tier": "INFLUENCER",
           "orderThreshold": 6,
+          "cumulativeThreshold": 12,
           "displayLabel": "Influencer",
           "status": "LOCKED",
-          "orderCountDisplay": "0/6"
+          "badgeType": "PROGRESS",
+          "badgeText": "0/6",
+          "orderCountDisplay": null,
+          "ordersInTier": 0,
+          "ordersNeeded": 6,
+          "daysInTier": null,
+          "progressInTier": 0
         },
         {
           "tier": "AMBASSADOR",
-          "orderThreshold": 12,
+          "orderThreshold": null,
+          "cumulativeThreshold": 12,
           "displayLabel": "Ambassador",
           "status": "LOCKED",
-          "orderCountDisplay": "0/6"
+          "badgeType": "NONE",
+          "badgeText": null,
+          "orderCountDisplay": null,
+          "ordersInTier": 0,
+          "ordersNeeded": null,
+          "daysInTier": null,
+          "progressInTier": 0
         }
       ]
     },
@@ -197,10 +219,10 @@ Returns user profile and current tier information for the page header.
       "daysRemaining": 53,
       "totalDays": 90,
       "maintenanceMessage": "Make 15 Orders by 9 March, to maintain this level.",
-      "ordersForMaintenance": 6,
-      "currentCycleOrders": 4,
+      "ordersForMaintenance": 15,
+      "currentCycleOrders": 3,
       "isMigrationCycle": false
-    },
+    }
   }
 }
 ```
@@ -217,18 +239,74 @@ Returns user profile and current tier information for the page header.
     "cacheable": false
   },
   "data": {
-    "user": {
-      "id": "usr_b2c3d4e5f6g7",
-      "displayName": "Sarah",
-      "image": {
-        "url": "https://cdn.waveapp.com/avatars/sarah.png"
-      }
-    },
     "tier": {
       "current": "INFLUENCER",
       "displayName": "Influencer",
-      "level": 2,
-      "bg_color": ["#5FA09E", "#9FDCD8"]
+      "image": {
+        "url": "https://cdn.waveapp.com/avatars/influencer.png"
+      },
+      "bgColor": ["#7B68AE", "#9B8AC4"]
+    },
+    "progression": {
+      "totalOrderCount": 9,
+      "currentTierOrderCount": 3,
+      "progressMessage": "3 orders away from becoming an Ambassador",
+      "progressPercentage": 50,
+      "isMaxTier": false,
+      "milestones": [
+        {
+          "tier": "PARTNER",
+          "orderThreshold": 6,
+          "cumulativeThreshold": 6,
+          "displayLabel": "Partner",
+          "status": "COMPLETED",
+          "badgeType": "CHECKMARK",
+          "badgeText": null,
+          "orderCountDisplay": null,
+          "ordersInTier": 6,
+          "ordersNeeded": 6,
+          "daysInTier": null,
+          "progressInTier": 100
+        },
+        {
+          "tier": "INFLUENCER",
+          "orderThreshold": 6,
+          "cumulativeThreshold": 12,
+          "displayLabel": "Influencer",
+          "status": "CURRENT",
+          "badgeType": "PROGRESS",
+          "badgeText": "3/6",
+          "orderCountDisplay": "3 orders / 24 days",
+          "ordersInTier": 3,
+          "ordersNeeded": 6,
+          "daysInTier": 24,
+          "progressInTier": 50
+        },
+        {
+          "tier": "AMBASSADOR",
+          "orderThreshold": null,
+          "cumulativeThreshold": 12,
+          "displayLabel": "Ambassador",
+          "status": "LOCKED",
+          "badgeType": "NONE",
+          "badgeText": null,
+          "orderCountDisplay": null,
+          "ordersInTier": 0,
+          "ordersNeeded": null,
+          "daysInTier": null,
+          "progressInTier": 0
+        }
+      ]
+    },
+    "cycle": {
+      "startDate": "2025-12-15T00:00:00Z",
+      "endDate": "2026-03-15T00:00:00Z",
+      "daysRemaining": 53,
+      "totalDays": 90,
+      "maintenanceMessage": "Make 15 Orders by 9 March, to maintain this level.",
+      "ordersForMaintenance": 15,
+      "currentCycleOrders": 9,
+      "isMigrationCycle": false
     }
   }
 }
@@ -246,78 +324,62 @@ Returns user profile and current tier information for the page header.
     "cacheable": false
   },
   "data": {
-    "user": {
-      "id": "usr_c3d4e5f6g7h8",
-      "displayName": "Mike",
-      "image": {
-        "url": "https://cdn.waveapp.com/avatars/mike.png"
-      }
-    },
     "tier": {
       "current": "AMBASSADOR",
       "displayName": "Ambassador",
-      "level": 3,
-      "bg_color": ["#6B8A3D", "#A8C973"]
-    }
-  }
-}
-```
-
----
-
-## 3. Loyalty Progression
-
-Returns tier progression, milestones, and cycle information.
-
-**URL:** `/api/v1/loyalty/progression`
-
-**Method:** `GET`
-
-### Response Body (Success) - Partner (4 orders)
-
-```json
-{
-  "meta": {
-    "request_id": "550e8400-e29b-41d4-a716-446655440004",
-    "timestamp": "2026-01-21T14:32:00Z",
-    "version": "1.0",
-    "end_point": "/api/v1/loyalty/progression",
-    "cacheable": false
-  },
-  "data": {
-    "progression": {
-      "currentOrderCount": 4,
-      "ordersToNextTier": 2,
-      "progressMessage": "2 orders away from becoming an Influencer",
-      "progressPercentage": 66.67,
-      "nextTier": {
-        "name": "INFLUENCER",
-        "displayName": "Influencer",
-        "level": 2,
-        "requiredOrders": 6,
-        "bg_color": ["#5FA09E", "#9FDCD8"]
+      "image": {
+        "url": "https://cdn.waveapp.com/avatars/ambassador.png"
       },
+      "bgColor": ["#2D8B6F", "#4AAD8C"]
+    },
+    "progression": {
+      "totalOrderCount": 14,
+      "currentTierOrderCount": 2,
+      "progressMessage": "More than 12 orders within the 90-day cycle",
+      "progressPercentage": 100,
+      "isMaxTier": true,
       "milestones": [
         {
           "tier": "PARTNER",
-          "orderThreshold": 0,
+          "orderThreshold": 6,
+          "cumulativeThreshold": 6,
           "displayLabel": "Partner",
-          "status": "CURRENT",
-          "orderCountDisplay": "3 orders / 37 days"
+          "status": "COMPLETED",
+          "badgeType": "CHECKMARK",
+          "badgeText": null,
+          "orderCountDisplay": null,
+          "ordersInTier": 6,
+          "ordersNeeded": 6,
+          "daysInTier": null,
+          "progressInTier": 100
         },
         {
           "tier": "INFLUENCER",
           "orderThreshold": 6,
+          "cumulativeThreshold": 12,
           "displayLabel": "Influencer",
-          "status": "LOCKED",
-          "orderCountDisplay": "0/6"
+          "status": "COMPLETED",
+          "badgeType": "CHECKMARK",
+          "badgeText": null,
+          "orderCountDisplay": null,
+          "ordersInTier": 6,
+          "ordersNeeded": 6,
+          "daysInTier": null,
+          "progressInTier": 100
         },
         {
           "tier": "AMBASSADOR",
-          "orderThreshold": 12,
+          "orderThreshold": null,
+          "cumulativeThreshold": 12,
           "displayLabel": "Ambassador",
-          "status": "LOCKED",
-          "orderCountDisplay": "0/6"
+          "status": "CURRENT",
+          "badgeType": "CHECKMARK",
+          "badgeText": null,
+          "orderCountDisplay": "12+ orders / 90 days",
+          "ordersInTier": 2,
+          "ordersNeeded": null,
+          "daysInTier": 90,
+          "progressInTier": 100
         }
       ]
     },
@@ -327,194 +389,9 @@ Returns tier progression, milestones, and cycle information.
       "daysRemaining": 53,
       "totalDays": 90,
       "maintenanceMessage": "Make 15 Orders by 9 March, to maintain this level.",
-      "ordersForMaintenance": 6,
-      "currentCycleOrders": 4,
+      "ordersForMaintenance": 15,
+      "currentCycleOrders": 14,
       "isMigrationCycle": false
-    },
-    "migration": null
-  }
-}
-```
-
-### Response Body (Success) - Influencer (7 orders)
-
-```json
-{
-  "meta": {
-    "request_id": "550e8400-e29b-41d4-a716-446655440005",
-    "timestamp": "2026-01-21T14:32:00Z",
-    "version": "1.0",
-    "end_point": "/api/v1/loyalty/progression",
-    "cacheable": false
-  },
-  "data": {
-    "progression": {
-      "currentOrderCount": 7,
-      "ordersToNextTier": 5,
-      "progressMessage": "5 orders away from becoming an Ambassador",
-      "progressPercentage": 58.33,
-      "nextTier": {
-        "name": "AMBASSADOR",
-        "displayName": "Ambassador",
-        "level": 3,
-        "requiredOrders": 12,
-        "bg_color": ["#6B8A3D", "#A8C973"]
-      },
-      "milestones": [
-        {
-          "tier": "PARTNER",
-          "orderThreshold": 0,
-          "displayLabel": "Partner",
-          "status": "COMPLETED",
-          "orderCountDisplay": "Completed"
-        },
-        {
-          "tier": "INFLUENCER",
-          "orderThreshold": 6,
-          "displayLabel": "Influencer",
-          "status": "CURRENT",
-          "orderCountDisplay": "5 orders / 24 days"
-        },
-        {
-          "tier": "AMBASSADOR",
-          "orderThreshold": 12,
-          "displayLabel": "Ambassador",
-          "status": "LOCKED",
-          "orderCountDisplay": "0/6"
-        }
-      ]
-    },
-    "cycle": {
-      "startDate": "2025-12-28T00:00:00Z",
-      "endDate": "2026-03-28T00:00:00Z",
-      "daysRemaining": 66,
-      "totalDays": 90,
-      "maintenanceMessage": "Make 15 Orders by 9 March, to maintain this level.",
-      "ordersForMaintenance": 6,
-      "currentCycleOrders": 7,
-      "isMigrationCycle": false
-    },
-    "migration": null
-  }
-}
-```
-
-### Response Body (Success) - Ambassador (15 orders)
-
-```json
-{
-  "meta": {
-    "request_id": "550e8400-e29b-41d4-a716-446655440006",
-    "timestamp": "2026-01-21T14:32:00Z",
-    "version": "1.0",
-    "end_point": "/api/v1/loyalty/progression",
-    "cacheable": false
-  },
-  "data": {
-    "progression": {
-      "currentOrderCount": 15,
-      "ordersToNextTier": null,
-      "progressMessage": "You've reached the highest tier!",
-      "progressPercentage": 100,
-      "nextTier": null,
-      "milestones": [
-        {
-          "tier": "PARTNER",
-          "orderThreshold": 0,
-          "displayLabel": "Partner",
-          "status": "COMPLETED",
-          "orderCountDisplay": "Completed"
-        },
-        {
-          "tier": "INFLUENCER",
-          "orderThreshold": 6,
-          "displayLabel": "Influencer",
-          "status": "COMPLETED",
-          "orderCountDisplay": "Completed"
-        },
-        {
-          "tier": "AMBASSADOR",
-          "orderThreshold": 12,
-          "displayLabel": "Ambassador",
-          "status": "CURRENT",
-          "orderCountDisplay": "12+ orders / 90 days"
-        }
-      ]
-    },
-    "cycle": {
-      "startDate": "2025-11-15T00:00:00Z",
-      "endDate": "2026-02-13T00:00:00Z",
-      "daysRemaining": 23,
-      "totalDays": 90,
-      "maintenanceMessage": "Make 15 Orders by 9 March, to maintain this level.",
-      "ordersForMaintenance": 12,
-      "currentCycleOrders": 15,
-      "isMigrationCycle": false
-    },
-    "migration": null
-  }
-}
-```
-
-### Response Body (Success) - Migration State
-
-```json
-{
-  "meta": {
-    "request_id": "550e8400-e29b-41d4-a716-446655440007",
-    "timestamp": "2026-01-21T14:32:00Z",
-    "version": "1.0",
-    "end_point": "/api/v1/loyalty/progression",
-    "cacheable": false
-  },
-  "data": {
-    "progression": {
-      "currentOrderCount": 12,
-      "ordersToNextTier": null,
-      "progressMessage": "You've reached the highest tier!",
-      "progressPercentage": 100,
-      "nextTier": null,
-      "milestones": [
-        {
-          "tier": "PARTNER",
-          "orderThreshold": 0,
-          "displayLabel": "Partner",
-          "status": "COMPLETED",
-          "orderCountDisplay": "Completed"
-        },
-        {
-          "tier": "INFLUENCER",
-          "orderThreshold": 6,
-          "displayLabel": "Influencer",
-          "status": "COMPLETED",
-          "orderCountDisplay": "Completed"
-        },
-        {
-          "tier": "AMBASSADOR",
-          "orderThreshold": 12,
-          "displayLabel": "Ambassador",
-          "status": "CURRENT",
-          "orderCountDisplay": "12 orders / 90 days"
-        }
-      ]
-    },
-    "cycle": {
-      "startDate": "2025-08-01T00:00:00Z",
-      "endDate": "2026-01-28T00:00:00Z",
-      "daysRemaining": 7,
-      "totalDays": 180,
-      "maintenanceMessage": "Make 15 Orders by 9 March, to maintain this level.",
-      "ordersForMaintenance": 12,
-      "currentCycleOrders": 12,
-      "isMigrationCycle": true
-    },
-    "migration": {
-      "isMigrated": true,
-      "migrationDate": "2026-01-15T00:00:00Z",
-      "legacyCycleDaysRemaining": 7,
-      "originalTier": "AMBASSADOR",
-      "migratedOrderCount": 12,
-      "specialMessage": "More 12 orders within this 90-day cycle"
     }
   }
 }
@@ -524,188 +401,62 @@ Returns tier progression, milestones, and cycle information.
 
 ## 4. Loyalty Brew Journey
 
-Returns Brew Journey status. Returns `null` data if user is not in Brew Journey.
-
-**URL:** `/api/v1/loyalty/brew-journey`
+**URL:** `/api/v1/loyalty/new-user-journey`
 
 **Method:** `GET`
 
-### Response Body (Success) - Active Brew Journey (New User)
-
-```json
 {
   "meta": {
-    "request_id": "550e8400-e29b-41d4-a716-446655440008",
-    "timestamp": "2026-01-21T14:32:00Z",
+    "request_id": "550e8400-e29b-41d4-a716-446655440000",
+    "timestamp": "2024-03-21T14:32:00Z",
     "version": "1.0",
-    "end_point": "/api/v1/loyalty/brew-journey",
-    "cacheable": false
+    "end_point": "/api/v2/cart/receiver-details"
   },
-  "data": {
-    "isActive": true,
-    "journeyType": "NEW",
-    "totalSteps": 5,
-    "currentStep": 1,
-    "completedOrders": 1,
-    "daysRemaining": 40,
-    "totalDays": 45,
-    "movRequirement": 300,
-    "signUpOfferDaysRemaining": 5,
-    "rewards": [
-      {
-        "step": 1,
-        "type": "DISCOUNT_FLAT",
-        "title": "₹100 Off",
-        "image": {
-          "url": "https://cdn.waveapp.com/icons/discount-100.png"
+  "data" : {
+    "title": "Complete 5 orders in 30 days using \n Third Wave app to win an exclusive reward!",
+    //below milestore layout, if it is null hide it
+    "message_details": {
+        "message":"Eligible for orders above ₹399 only",
+        "style": {
+            "text_color": "#145738"
+        }
+    },
+    // style is for setting background of widget, if bg_image is present render else use bg_color
+    "style": {
+        "bg_color": "#dbefd7",
+        "bg_image": {
+            "url": "bg_image.png"
         },
-        "status": "UNLOCKED",
-        "value": "₹100 Off"
-      },
-      {
-        "step": 2,
-        "type": "FREE_COFFEE",
-        "title": "Free Coffee",
-        "image": {
-          "url": "https://cdn.waveapp.com/icons/free-coffee.png"
-        },
-        "status": "LOCKED",
-        "value": null
-      },
-      {
-        "step": 3,
-        "type": "DISCOUNT_PERCENTAGE",
-        "title": "15% Off",
-        "image": {
-          "url": "https://cdn.waveapp.com/icons/discount-15.png"
-        },
-        "status": "LOCKED",
-        "value": "15%"
-      },
-      {
-        "step": 4,
-        "type": "COUPON",
-        "title": "Special Coupon",
-        "image": {
-          "url": "https://cdn.waveapp.com/icons/coupon.png"
-        },
-        "status": "LOCKED",
-        "value": null
-      },
-      {
-        "step": 5,
-        "type": "FREE_COFFEE",
-        "title": "Free Coffee",
-        "image": {
-          "url": "https://cdn.waveapp.com/icons/trophy.png"
-        },
-        "status": "LOCKED",
-        "value": null
-      }
-    ],
-    "ctaText": "Know more",
-    "title": "Start your Brew Journey - Complete 5 orders",
-    "subtitle": "in 45 days to unlock exclusive rewards",
-    "urgencyMessage": "Hurry!! 5 days remaining to use the sign up offer"
+        "progress_color": "#4db436",
+        "dotted_line_color": "#656060"
+    },
+    "info": {
+        "cta_text": "Know More",
+        "title":"Offer Name",
+        "summary_list": [{
+          "message": "Rule 1"
+        }]
+    },
+    "tick_image": {
+        "url": "tick_img.png"
+    },
+    "current_progress": 3,
+    "total_steps": 5,
+    "steps": [
+        {
+            "message": "Almost there",
+            "status":"completed", //up-coming, in-queue
+            "image": {
+                "url": "img.png"
+            }
+        }
+    ]
   }
 }
-```
 
-### Response Body (Success) - Migrated Brew Journey (Old User)
+Refer this more
 
-```json
-{
-  "meta": {
-    "request_id": "550e8400-e29b-41d4-a716-446655440009",
-    "timestamp": "2026-01-21T14:32:00Z",
-    "version": "1.0",
-    "end_point": "/api/v1/loyalty/brew-journey",
-    "cacheable": false
-  },
-  "data": {
-    "isActive": true,
-    "journeyType": "OLD",
-    "totalSteps": 5,
-    "currentStep": 3,
-    "completedOrders": 3,
-    "daysRemaining": 20,
-    "totalDays": 45,
-    "movRequirement": 400,
-    "signUpOfferDaysRemaining": 0,
-    "rewards": [
-      {
-        "step": 1,
-        "type": "DISCOUNT_FLAT",
-        "title": "₹100 Off",
-        "image": {
-          "url": "https://cdn.waveapp.com/icons/discount-100.png"
-        },
-        "status": "REDEEMED",
-        "value": "₹100 Off"
-      },
-      {
-        "step": 2,
-        "type": "DISCOUNT_PERCENTAGE",
-        "title": "15% Off",
-        "image": {
-          "url": "https://cdn.waveapp.com/icons/discount-15.png"
-        },
-        "status": "UNLOCKED",
-        "value": "15%"
-      },
-      {
-        "step": 3,
-        "type": "COUPON",
-        "title": "Special Coupon",
-        "image": {
-          "url": "https://cdn.waveapp.com/icons/coupon.png"
-        },
-        "status": "LOCKED",
-        "value": null
-      },
-      {
-        "step": 4,
-        "type": "COUPON",
-        "title": "Special Coupon",
-        "image": {
-          "url": "https://cdn.waveapp.com/icons/coupon.png"
-        },
-        "status": "LOCKED",
-        "value": null
-      },
-      {
-        "step": 5,
-        "type": "FREE_COFFEE",
-        "title": "Free Coffee",
-        "image": {
-          "url": "https://cdn.waveapp.com/icons/trophy.png"
-        },
-        "status": "LOCKED",
-        "value": null
-      }
-    ],
-    "ctaText": "Know more",
-    "title": "Continue your Brew Journey - 2 orders to go",
-    "subtitle": "Complete within 20 days to unlock rewards",
-    "urgencyMessage": null
-  }
-}
-```
-
-### Response Body (Success) - No Brew Journey
-
-```json
-{
-  "meta": {
-    "request_id": "550e8400-e29b-41d4-a716-446655440010",
-    "timestamp": "2026-01-21T14:32:00Z",
-    "version": "1.0",
-    "end_point": "/api/v1/loyalty/brew-journey",
-    "cacheable": false
-  },
-  "data": null
-}
-```
+https://github.com/TWC-HBPL/twc-tech-docs/blob/master/api_contracts/home-install-uninstall.md
 
 ---
 
