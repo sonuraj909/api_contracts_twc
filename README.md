@@ -836,25 +836,26 @@ Returns FAQ items for the loyalty program.
     "currentTier": {
       "tier": "PARTNER",
       "displayLabel": "Partner",
-      "iconColor": "#AC6069"
+      "image": {
+        "url": "https://cdn.waveapp.com/avatars/partner.png"
+      },
     },
     "nextTier": {
       "tier": "INFLUENCER",
       "displayLabel": "Influencer",
-      "iconColor": "#7B68AE"
+      "image": {
+        "url": "https://cdn.waveapp.com/avatars/partner.png"
+      },
     },
     "progress": {
       "message": "Just 3 more orders to unlock your next level!",
-      "messageType": "PROGRESSION",
+      "style": {
+        "progress_color": "#4db436",
+        "track_color": "#656060"
+      },
       "ordersCompleted": 3,
       "ordersRequired": 6,
-      "ordersRemaining": 3,
-      "progressPercentage": 50,
-      "progressSegments": {
-        "total": 6,
-        "filled": 3
-      }
-    }
+\    }
   }
 }
 ```
@@ -874,24 +875,25 @@ Returns FAQ items for the loyalty program.
     "currentTier": {
       "tier": "INFLUENCER",
       "displayLabel": "Influencer",
-      "iconColor": "#7B68AE"
+      "image": {
+        "url": "https://cdn.waveapp.com/avatars/partner.png"
+      },
     },
     "nextTier": {
       "tier": "AMBASSADOR",
       "displayLabel": "Ambassador",
-      "iconColor": "#2D8B6F"
+      "image": {
+        "url": "https://cdn.waveapp.com/avatars/partner.png"
+      },
     },
     "progress": {
       "message": "Just 3 more orders to unlock your next level!",
-      "messageType": "PROGRESSION",
+      "style": {
+        "progress_color": "#4db436",
+        "track_color": "#656060"
+      },
       "ordersCompleted": 3,
       "ordersRequired": 6,
-      "ordersRemaining": 3,
-      "progressPercentage": 50,
-      "progressSegments": {
-        "total": 6,
-        "filled": 3
-      }
     }
   }
 }
@@ -913,20 +915,19 @@ Returns FAQ items for the loyalty program.
     "currentTier": {
       "tier": "AMBASSADOR",
       "displayLabel": "Ambassador",
-      "iconColor": "#2D8B6F"
+      "image": {
+        "url": "https://cdn.waveapp.com/avatars/partner.png"
+      },
     },
     "nextTier": null,
     "progress": {
       "message": "9 more orders to retain your Ambassador status",
-      "messageType": "RETENTION",
+      "style": {
+        "progress_color": "#4db436",
+        "track_color": "#656060"
+      },
       "ordersCompleted": 6,
       "ordersRequired": 15,
-      "ordersRemaining": 9,
-      "progressPercentage": 40,
-      "progressSegments": {
-        "total": 6,
-        "filled": 3
-      }
     },
   }
 }
