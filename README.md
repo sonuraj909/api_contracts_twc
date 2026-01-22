@@ -808,24 +808,3 @@ Returns FAQ items for the loyalty program.
 ```
 
 ---
-
-## 7. Error Response
-
-All APIs return errors in the following format:
-
-```json
-{
-  "meta": {
-    "request_id": "550e8400-e29b-41d4-a716-446655440099",
-    "timestamp": "2026-01-21T14:32:00Z",
-    "version": "1.0",
-    "end_point": "/api/v1/loyalty/header",
-    "cacheable": false
-  },
-  "error": {
-    "code": "UNAUTHORIZED",
-    "message": "Invalid or expired authentication token",
-    "details": null
-  }
-}
-```
