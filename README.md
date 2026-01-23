@@ -133,6 +133,32 @@ For AMBASSADOR
 }
 ```
 
+### Response Body(Failure)
+```json
+{
+  "meta": {
+    "request_id": "550e8400-e29b-41d4-a716-446655440000",
+    "timestamp": "2024-03-21T14:32:00Z",
+    "version": "1.0"
+  },
+  "error": {
+    "code": "INTERNAL_ERROR",
+    "message": "Failed to fetch widgets data"
+  },
+  "user_message": {
+    "type": "error",
+    "display": {
+      "style": "toast"
+    },
+    "content": {
+      "title": null,
+      "message": "Unable to fetch widgets data at the moment, please try again later"
+    }
+  }
+}
+```
+
+
 ---
 
 ## 2. Loyalty Header
