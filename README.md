@@ -656,10 +656,9 @@ Returns current tier benefits and next tier benefits preview.
       "tier": "INFLUENCER",
       "title": "Unlock Influencer Benefits",
       "title_text_color":"##FFFFFF",
-      "title_bg_color":["##71719C", "##535388"],
-      "card_bg_color":["##AC6069", "##EC8893"],
-      "card_border_color":"##56568A",
-      "bg_color":"##FFFFFF",
+      "title_bg_color":["#71719C", "#535388"],
+      "card_bg_color":["#8989A9", "#54548A"],
+      "card_border_color":"#71719B",
       "benefits": [
         {
           "title": "Free coffee for your birthday",
@@ -690,11 +689,10 @@ Returns current tier benefits and next tier benefits preview.
     {
       "tier": "AMBASSADOR",
       "title": "Unlock Ambassador Benefits",
-      "title_text_color":"##FFFFFF",
-      "title_bg_color":["##71719C", "##535388"],
-      "card_bg_color":["##AC6069", "##EC8893"],
-      "card_border_color":"##56568A",
-      "bg_color":"##FFFFFF",
+      "title_text_color":"#FFFFFF",
+      "title_bg_color":["#749E95", "#58867C"],
+      "card_bg_color":["#759E94", "#57877C"],
+      "card_border_color":"#D0DBD9",
       "benefits": [
         {
           "title": "Free coffee for your birthday",
