@@ -202,7 +202,8 @@ Returns user profile and current tier information for the page header.
           "status": "CURRENT",
           "badge": {
             "text": "3/6",
-            "bg_color": ["#AC6069", "#EC8893"],
+            "bg_color": ["#B2646D", "#E5848E"],
+            "border_color":"#D67A85",
             "text_color": "#FFFFFF"
           },
           "tick_image": null,
@@ -223,7 +224,8 @@ Returns user profile and current tier information for the page header.
           "status": "LOCKED",
           "badge": {
             "text": "0/6",
-            "background_color": "#9E9E9E",
+            "bg_color": ["#C1C1D4", "#8686B5"],
+            "border_color":"#8686B599",
             "text_color": "#FFFFFF"
           },
           "tick_image": null,
@@ -301,7 +303,8 @@ Returns user profile and current tier information for the page header.
           "status": "CURRENT",
           "badge": {
             "text": "3/6",
-            "background_color": "#7B68AE",
+            "bg_color": ["#8686B5", "#C1C1D4"],
+            "border_color": "#7B68AE",
             "text_color": "#FFFFFF"
           },
           "tick_image": null,
@@ -320,7 +323,12 @@ Returns user profile and current tier information for the page header.
           "tier": "AMBASSADOR",
           "display_label": "Ambassador",
           "status": "LOCKED",
-          "badge": null,
+          "badge": {
+            "text": "0/6",
+            "bg_color": ["#4AAD8C", "#2D7A65"],
+            "border_color": "#2D7A6599",
+            "text_color": "#FFFFFF"
+          },
           "tick_image": null,
           "order_count_display": null,
           "progress": null
@@ -430,6 +438,22 @@ Returns user profile and current tier information for the page header.
 }
 ```
 
+### Response Body(Failure)
+
+```json
+{
+  "meta": {
+    "request_id": "550e8400-e29b-41d4-a716-446655440000",
+    "timestamp": "2024-03-21T14:32:00Z",
+    "version": "1.0"
+  },
+  "error": {
+    "code": "INTERNAL_ERROR",
+    "message": "Failed to fetch Header data"
+  }
+}
+```
+
 ---
 
 ## 3. Loyalty Brew Journey
@@ -485,6 +509,22 @@ Returns user profile and current tier information for the page header.
             }
         }
     ]
+  }
+}
+```
+
+### Response Body(Failure)
+
+```json
+{
+  "meta": {
+    "request_id": "550e8400-e29b-41d4-a716-446655440000",
+    "timestamp": "2024-03-21T14:32:00Z",
+    "version": "1.0"
+  },
+  "error": {
+    "code": "INTERNAL_ERROR",
+    "message": "Failed to fetch progression header data"
   }
 }
 ```
