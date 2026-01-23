@@ -6,9 +6,9 @@
 
 - [Loyalty Skeleton](#1-loyalty-skeleton)
 - [Loyalty Header](#2-loyalty-header)
-- [Loyalty Brew Journey](#4-loyalty-brew-journey)
-- [Unlocked Loyalty Benefits](#5-unlocked-loyalty-benefits)
-- [Locked Loyalty Benefits](#6-locked-loyalty-benefits)
+- [Loyalty Brew Journey](#3-loyalty-brew-journey)
+- [Unlocked Loyalty Benefits](#4-unlocked-loyalty-benefits)
+- [Locked Loyalty Benefits](#5-locked-loyalty-benefits)
 - [Loyalty FAQ](#6-loyalty-faq)
 - [Loyalty Progress Widget for App Scan Bottom Sheet](#7-loyalty-progress-widget-for-app-scan-bottom-sheet)
 
@@ -184,7 +184,7 @@ Returns user profile and current tier information for the page header.
     "header": {
       "current_tier": "PARTNER",
       "display_name": "Partner",
-      "avatar": {
+      "profile_image": {
         "url": "https://cdn.waveapp.com/avatars/user_avatar.png"
       },
       "bg_colors": ["#AC6069", "#EC8893"]
@@ -266,7 +266,7 @@ Returns user profile and current tier information for the page header.
     "header": {
       "current_tier": "INFLUENCER",
       "display_name": "Influencer",
-      "avatar": {
+      "profile_image": {
         "url": "https://cdn.waveapp.com/avatars/user_avatar.png"
       },
       "bg_colors": ["#5B4B8A", "#7B68AE"]
@@ -352,7 +352,7 @@ Returns user profile and current tier information for the page header.
     "header": {
       "current_tier": "AMBASSADOR",
       "display_name": "Ambassador",
-      "avatar": {
+      "profile_image": {
         "url": "https://cdn.waveapp.com/avatars/user_avatar.png"
       },
       "bg_colors": ["#2D7A65", "#4AAD8C"]
@@ -432,7 +432,7 @@ Returns user profile and current tier information for the page header.
 
 ---
 
-## 4. Loyalty Brew Journey
+## 3. Loyalty Brew Journey
 
 **URL:** `/api/v2/homepage/get-data?type=new-user-journey`
 
@@ -491,7 +491,7 @@ Returns user profile and current tier information for the page header.
 
 ---
 
-## 5. Unlocked Loyalty Benefits
+## 4. Unlocked Loyalty Benefits
 
 **URL:** `/api/v1/loyalty/unlocked-benefits`
 
@@ -590,7 +590,7 @@ Returns user profile and current tier information for the page header.
 ```
 
 
-## 6. Locked Loyalty Benefits
+## 5. Locked Loyalty Benefits
 
 Returns current tier benefits and next tier benefits preview.
 
