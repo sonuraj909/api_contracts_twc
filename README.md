@@ -656,7 +656,7 @@ Returns current tier benefits and next tier benefits preview.
       "tier": "INFLUENCER",
       "title": "Unlock Influencer Benefits",
         "style":{
-        "title_text_color":"#FFFFFF",
+        "title_color":"#FFFFFF",
         "title_bg_color":["#71719C", "#535388"],
         "card_bg_color":["#8989A9", "#54548A"],
         "card_border_color":"#71719B",
@@ -693,7 +693,7 @@ Returns current tier benefits and next tier benefits preview.
       "tier": "AMBASSADOR",
       "title": "Unlock Ambassador Benefits",
         "style":{
-        "title_text_color":"##FFFFFF",
+        "title_color":"##FFFFFF",
         "title_bg_color":["##71719C", "##535388"],
         "card_bg_color":["##AC6069", "##EC8893"],
         "card_border_color":"##56568A",
@@ -748,7 +748,7 @@ Returns current tier benefits and next tier benefits preview.
       "tier": "AMBASSADOR",
       "title": "Unlock Ambassador Benefits",
       "style":{
-        "title_text_color":"##FFFFFF",
+        "title_color":"##FFFFFF",
         "title_bg_color":["##71719C", "##535388"],
         "card_bg_color":["##AC6069", "##EC8893"],
         "card_border_color":"##56568A",
