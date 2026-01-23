@@ -241,7 +241,7 @@ Returns user profile and current tier information for the page header.
       ]
     },
     "maintenance": {
-      "icon": {
+      "image": {
         "url": "https://cdn.waveapp.com/icons/star_maintenance.png"
       },
       "message": "Make 15 Orders by 9 March, to maintain this level."
@@ -268,13 +268,13 @@ Returns user profile and current tier information for the page header.
       "profile_image": {
         "url": "https://cdn.waveapp.com/avatars/user_avatar.png"
       },
-      "bg_colors": ["#5B4B8A", "#7B68AE"]
+      "bg_colors": ["#74749E", "#464681"]
     },
     "progression": {
       "progress_message": "5 orders away from becoming an Ambassador",
       "style": {
-        "filled_color": "#4CAF50",
-        "unfilled_color": "#E0E0E0"
+        "filled_color": "#27AE60",
+        "unfilled_color": "#F5F1EE"
       },
       "milestones": [
         {
@@ -307,7 +307,7 @@ Returns user profile and current tier information for the page header.
           },
           "order_count_display": {
             "text": "3 orders / 24 days",
-            "text_color": "#7B68AE"
+            "text_color": "#8787B6"
           },
           "progress": {
             "orders_in_tier": 3,
@@ -327,7 +327,7 @@ Returns user profile and current tier information for the page header.
       ]
     },
     "maintenance": {
-      "icon": {
+      "image": {
         "url": "https://cdn.waveapp.com/icons/star_maintenance.png"
       },
       "message": "Make 15 Orders by 9 March, to maintain this level."
@@ -354,13 +354,13 @@ Returns user profile and current tier information for the page header.
       "profile_image": {
         "url": "https://cdn.waveapp.com/avatars/user_avatar.png"
       },
-      "bg_colors": ["#2D7A65", "#4AAD8C"]
+      "bg_colors": ["#769F96", "#56867B"]
     },
     "progression": {
       "progress_message": "More than 12 orders within the 90-day cycle",
       "style": {
-        "filled_color": "#4CAF50",
-        "unfilled_color": "#E0E0E0"
+        "filled_color": "#27AE60",
+        "unfilled_color": "#F5F1EE"
       },
       "milestones": [
         {
@@ -406,7 +406,7 @@ Returns user profile and current tier information for the page header.
           "badge": null,
           "order_count_display": {
             "text": "12+ orders / 90 days",
-            "text_color": "#2D8B6F"
+            "text_color": "#659188"
           },
           "progress": {
             "orders_in_tier": 2,
@@ -418,7 +418,7 @@ Returns user profile and current tier information for the page header.
       ]
     },
     "maintenance": {
-      "icon": {
+      "image": {
         "url": "https://cdn.waveapp.com/icons/star_maintenance.png"
       },
       "message": "Make 15 Orders by 9 March, to maintain this level."
