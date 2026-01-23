@@ -191,9 +191,9 @@ Returns user profile and current tier information for the page header.
     },
     "progression": {
       "progress_message": "2 orders away from becoming an Influencer",
-      "progress_bar": {
-        "filled_color": "#4CAF50",
-        "unfilled_color": "#E0E0E0"
+      "style": {
+        "filled_color": "#27AE60",
+        "unfilled_color": "#F5F1EE"
       },
       "milestones": [
         {
@@ -208,7 +208,7 @@ Returns user profile and current tier information for the page header.
           "tick_image": null,
           "order_count_display": {
             "text": "3 orders / 37 days",
-            "text_color": "#AC6069"
+            "text_color": "#D67A85"
           },
           "progress": {
             "orders_in_tier": 3,
@@ -273,7 +273,7 @@ Returns user profile and current tier information for the page header.
     },
     "progression": {
       "progress_message": "5 orders away from becoming an Ambassador",
-      "progress_bar": {
+      "style": {
         "filled_color": "#4CAF50",
         "unfilled_color": "#E0E0E0"
       },
@@ -359,7 +359,7 @@ Returns user profile and current tier information for the page header.
     },
     "progression": {
       "progress_message": "More than 12 orders within the 90-day cycle",
-      "progress_bar": {
+      "style": {
         "filled_color": "#4CAF50",
         "unfilled_color": "#E0E0E0"
       },
