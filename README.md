@@ -553,27 +553,27 @@ Returns user profile and current tier information for the page header.
     "tier_benefits": [
       {
         "title": "Referral Discount",
-        "title_color": "#FFFFFF",
+        "title_color": "#1A1A1A",
         "image": "https://cdn.waveapp.com/icons/birthday-coffee.png",
         "tag": {
           "label": "Unlimited",
-          "bg_color": "#535388",
+          "bg_color": "#EEA73C",
           "text_color": "#FFFFFF"
         }
       },
       {
         "title": "1 Free Coffee",
-        "title_color": "#FFFFFF",
+        "title_color": "#1A1A1A",
         "image": "https://cdn.waveapp.com/icons/birthday-coffee.png",
         "tag": {
           "label": "Claimed",
-          "bg_color": "#535388",
+          "bg_color": "#2C8064",
           "text_color": "#FFFFFF"
         }
       },
       {
         "title": "1 Free Coffee",
-        "title_color": "#FFFFFF",
+        "title_color": "#1A1A1A",
         "image": "https://cdn.waveapp.com/icons/birthday-coffee.png",
         "tag": null
       }
