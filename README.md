@@ -174,6 +174,7 @@ Returns user profile and current tier information for the page header.
 "LOCKED"
 ```
 
+
 **URL:** `/api/v1/loyalty/header`
 
 **Method:** `GET`
