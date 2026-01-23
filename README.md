@@ -24,6 +24,7 @@
 
 ---
 
+
 ## 1. Loyalty Skeleton
 
 Returns widget skeleton configuration for loading states.
@@ -164,6 +165,14 @@ For AMBASSADOR
 ## 2. Loyalty Header
 
 Returns user profile and current tier information for the page header.
+
+## Status Enum
+
+```json
+"CURRENT"
+"COMPLETED"
+"LOCKED"
+```
 
 **URL:** `/api/v1/loyalty/header`
 
