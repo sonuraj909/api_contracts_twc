@@ -206,7 +206,6 @@ Returns user profile and current tier information for the page header.
             "border_color":"#D67A85",
             "text_color": "#FFFFFF"
           },
-          "tick_image": null,
           "order_count_display": {
             "text": "3 orders / 37 days",
             "text_color": "#D67A85"
@@ -228,7 +227,6 @@ Returns user profile and current tier information for the page header.
             "border_color":"#8686B599",
             "text_color": "#FFFFFF"
           },
-          "tick_image": null,
           "order_count_display": null,
           "progress": null
         },
@@ -236,8 +234,12 @@ Returns user profile and current tier information for the page header.
           "tier": "AMBASSADOR",
           "display_label": "Ambassador",
           "status": "LOCKED",
-          "badge": null,
-          "tick_image": null,
+          "badge": {
+            "text": "0/6",
+            "bg_color": ["#4AAD8C", "#2D7A65"],
+            "border_color": "#2D7A6599",
+            "text_color": "#FFFFFF"
+          },
           "order_count_display": null,
           "progress": null
         }
@@ -284,10 +286,11 @@ Returns user profile and current tier information for the page header.
           "tier": "PARTNER",
           "display_label": "Partner",
           "status": "COMPLETED",
-          "badge": null,
-          "tick_image": {
-            "url": "https://cdn.waveapp.com/icons/tick_complete.png",
-            "background_color": "#E8B4B8"
+          "badge": {
+            "text": "6/6",
+            "bg_color": ["#B2646D", "#E5848E"],
+            "border_color": "#D67A85",
+            "text_color": "#FFFFFF"
           },
           "order_count_display": null,
           "progress": {
@@ -307,7 +310,6 @@ Returns user profile and current tier information for the page header.
             "border_color": "#7B68AE",
             "text_color": "#FFFFFF"
           },
-          "tick_image": null,
           "order_count_display": {
             "text": "3 orders / 24 days",
             "text_color": "#7B68AE"
@@ -329,7 +331,6 @@ Returns user profile and current tier information for the page header.
             "border_color": "#2D7A6599",
             "text_color": "#FFFFFF"
           },
-          "tick_image": null,
           "order_count_display": null,
           "progress": null
         }
@@ -376,10 +377,11 @@ Returns user profile and current tier information for the page header.
           "tier": "PARTNER",
           "display_label": "Partner",
           "status": "COMPLETED",
-          "badge": null,
-          "tick_image": {
-            "url": "https://cdn.waveapp.com/icons/tick_complete.png",
-            "background_color": "#A8D5C2"
+          "badge": {
+            "text": "6/6",
+            "bg_color": ["#B2646D", "#E5848E"],
+            "border_color": "#D67A85",
+            "text_color": "#FFFFFF"
           },
           "order_count_display": null,
           "progress": {
@@ -393,10 +395,11 @@ Returns user profile and current tier information for the page header.
           "tier": "INFLUENCER",
           "display_label": "Influencer",
           "status": "COMPLETED",
-          "badge": null,
-          "tick_image": {
-            "url": "https://cdn.waveapp.com/icons/tick_complete.png",
-            "background_color": "#A8D5C2"
+          "badge": {
+            "text": "6/6",
+            "bg_color": ["#8686B5", "#C1C1D4"],
+            "border_color": "#7B68AE",
+            "text_color": "#FFFFFF"
           },
           "order_count_display": null,
           "progress": {
@@ -410,10 +413,11 @@ Returns user profile and current tier information for the page header.
           "tier": "AMBASSADOR",
           "display_label": "Ambassador",
           "status": "CURRENT",
-          "badge": null,
-          "tick_image": {
-            "url": "https://cdn.waveapp.com/icons/tick_complete.png",
-            "background_color": "#A8D5C2"
+          "badge": {
+            "text": "12+",
+            "bg_color": ["#4AAD8C", "#2D7A65"],
+            "border_color": "#2D7A65",
+            "text_color": "#FFFFFF"
           },
           "order_count_display": {
             "text": "12+ orders / 90 days",
