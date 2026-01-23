@@ -234,12 +234,7 @@ Returns user profile and current tier information for the page header.
           "tier": "AMBASSADOR",
           "display_label": "Ambassador",
           "status": "LOCKED",
-          "badge": {
-            "text": "0/6",
-            "bg_color": ["#4AAD8C", "#2D7A65"],
-            "border_color": "#2D7A6599",
-            "text_color": "#FFFFFF"
-          },
+          "badge": null,
           "order_count_display": null,
           "progress": null
         }
@@ -325,12 +320,7 @@ Returns user profile and current tier information for the page header.
           "tier": "AMBASSADOR",
           "display_label": "Ambassador",
           "status": "LOCKED",
-          "badge": {
-            "text": "0/6",
-            "bg_color": ["#4AAD8C", "#2D7A65"],
-            "border_color": "#2D7A6599",
-            "text_color": "#FFFFFF"
-          },
+          "badge": null,
           "order_count_display": null,
           "progress": null
         }
@@ -413,12 +403,7 @@ Returns user profile and current tier information for the page header.
           "tier": "AMBASSADOR",
           "display_label": "Ambassador",
           "status": "CURRENT",
-          "badge": {
-            "text": "12+",
-            "bg_color": ["#4AAD8C", "#2D7A65"],
-            "border_color": "#2D7A65",
-            "text_color": "#FFFFFF"
-          },
+          "badge": null,
           "order_count_display": {
             "text": "12+ orders / 90 days",
             "text_color": "#2D8B6F"
