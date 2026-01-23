@@ -550,10 +550,13 @@ Returns user profile and current tier information for the page header.
   "data": {
     "title": "Influencer Benefits",
     "sub_title": "Your exclusive perks as an influencer",
+    "style":{
+        "title_color": "#1A1A1A",
+        "border_color":"#6A8EB1"
+    }
     "tier_benefits": [
       {
         "title": "Referral Discount",
-        "title_color": "#1A1A1A",
         "image": "https://cdn.waveapp.com/icons/birthday-coffee.png",
         "tag": {
           "label": "Unlimited",
@@ -563,7 +566,6 @@ Returns user profile and current tier information for the page header.
       },
       {
         "title": "1 Free Coffee",
-        "title_color": "#1A1A1A",
         "image": "https://cdn.waveapp.com/icons/birthday-coffee.png",
         "tag": {
           "label": "Claimed",
@@ -573,7 +575,6 @@ Returns user profile and current tier information for the page header.
       },
       {
         "title": "1 Free Coffee",
-        "title_color": "#1A1A1A",
         "image": "https://cdn.waveapp.com/icons/birthday-coffee.png",
         "tag": null
       }
