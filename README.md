@@ -808,8 +808,8 @@ Returns FAQ items for the loyalty program.
     "progress": {
       "message": "Just 3 more orders to unlock your next level!",
       "style": {
-        "progress_color": "#4db436",
-        "track_color": "#656060"
+        "filled_color": "#4db436",
+        "unfilled_color": "#656060"
       },
       "orders_completed": 3,
       "orders_required": 6,
@@ -847,8 +847,8 @@ Returns FAQ items for the loyalty program.
     "progress": {
       "message": "Just 3 more orders to unlock your next level!",
       "style": {
-        "progress_color": "#4db436",
-        "track_color": "#656060"
+        "filled_color": "#4db436",
+        "unfilled_color": "#656060"
       },
       "orders_completed": 3,
       "orders_required": 6,
@@ -881,8 +881,8 @@ Returns FAQ items for the loyalty program.
     "progress": {
       "message": "9 more orders to retain your Ambassador status",
       "style": {
-        "progress_color": "#4db436",
-        "track_color": "#656060"
+        "filled_color": "#4db436",
+        "unfilled_color": "#656060"
       },
       "orders_completed": 6,
       "orders_required": 12,
