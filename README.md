@@ -161,9 +161,7 @@ Returns user profile and current tier information for the page header.
       "avatar": {
         "url": "https://cdn.waveapp.com/avatars/user_avatar.png"
       },
-      "background": {
-        "gradient_colors": ["#AC6069", "#EC8893"]
-      }
+      "bg_colors": ["#AC6069", "#EC8893"]
     },
     "progression": {
       "progress_message": "2 orders away from becoming an Influencer",
@@ -178,7 +176,7 @@ Returns user profile and current tier information for the page header.
           "status": "CURRENT",
           "badge": {
             "text": "3/6",
-            "background_color": "#AC6069",
+            "bg_color": ["#AC6069", "#EC8893"],
             "text_color": "#FFFFFF"
           },
           "tick_image": null,
@@ -245,9 +243,7 @@ Returns user profile and current tier information for the page header.
       "avatar": {
         "url": "https://cdn.waveapp.com/avatars/user_avatar.png"
       },
-      "background": {
-        "gradient_colors": ["#5B4B8A", "#7B68AE"]
-      }
+      "bg_colors": ["#5B4B8A", "#7B68AE"]
     },
     "progression": {
       "progress_message": "5 orders away from becoming an Ambassador",
@@ -333,9 +329,7 @@ Returns user profile and current tier information for the page header.
       "avatar": {
         "url": "https://cdn.waveapp.com/avatars/user_avatar.png"
       },
-      "background": {
-        "gradient_colors": ["#2D7A65", "#4AAD8C"]
-      }
+      "bg_colors": ["#2D7A65", "#4AAD8C"]
     },
     "progression": {
       "progress_message": "More than 12 orders within the 90-day cycle",
